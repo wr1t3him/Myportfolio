@@ -1,0 +1,177 @@
+﻿@{
+    ViewBag.Title = "Java Exercises";
+
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise1Modal">Exercise #1</button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise2modal">Exercise #2</button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise3modal">Exercise #3</button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise4modal">Exercise #4</button>
+
+    <!-- Modal -->
+    <div id="Exercise1Modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">JS Exercise #1: Working with user data</h4>
+                </div>
+                <div class="modal-body">
+                    <p>In this exercises I will prompt the user for a series of numbers and will make calculations based on those numbers</p>
+
+                    @*Using the BS Grid system to layout my labels and inputs...*@
+                    <div class="container">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">Enter number 1:</div>
+                                <div class="col-md-2">
+                                    <input id="ex1num1" type="number" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">Enter number 2:</div>
+                                <div class="col-md-2">
+                                    <input id="ex1num2" type="number" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">Enter number 3:</div>
+                                <div class="col-md-2">
+                                    <input id="ex1num3" type="number" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">Enter number 4:</div>
+                                <div class="col-md-2">
+                                    <input id="ex1num4" type="number" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">Enter number 5:</div>
+                                <div class="col-md-2">
+                                    <input id="ex1num5" type="number" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <button id="btnEx1" class="btn btn-info btn-lg">Click Me</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p id="ex1output"></p>
+                            <p id="ex2output"></p>
+                            <p id="ex3output"></p>
+                            <p id="ex4output"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div id="Exercise2modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">JS Exercise #2: Countdown Calculations</h3>
+                </div>
+                <div class="modal-body">
+                    <p>This exercise will take a number that will be multipled by all the previous numbers in order of highest to lowest.</p>
+                </div>
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3">Enter a positive number: </div>
+                            <input id="factornum" type="number" />
+                            <div class="col-md-4-offset-2">
+                                <p id="joutput2"></p>
+                            </div>
+                            <div class="col-md-2">
+                                <button id="btnEx2" class="btn btn-info btn-lg">Begin</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div id="Exercise3modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">JS Exercise #3: FizzBuzz Math!</h3>
+                </div>
+                <div class="modal-body">
+                    <p>From zero to hundred.</p>
+                </div>
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3">Enter a positive number: </div>
+                            <input id="fbnum1" type="number" />
+                            <div class="col-md-3">Enter a second positive number: </div>
+                            <input id="fbnum2" type="number" />
+                            <div class=" col-md-6">
+                                <p id="fizzout"></p>
+                            </div>
+                        </div>
+                        
+                            <div class="col-md-3">
+                                <button id="btnEx3" class="btn btn-info btn-lg">Let's Sizzle</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!--Modal-->
+    <div id="Exercise4modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">JS Exercise #4: Reverse Strings</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Let's find out if your words are mirror friendly!</p>
+                </div>
+                <div class="container">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-3">Enter a word or phrase: </div>
+                            <input id="sentence" type="string" />
+                            <div class="col-md-4">
+                                <p id="joutput4"></p>
+                            </div>
+                            <div class="col-md-4">
+                                <button id="btnEx4" class="btn btn-info btn-lg">Start</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @section scripts {
+      
+    <script src="~/Scripts/ExercisesScript.js"></script>
+        }
+       
+        }
+   
