@@ -79,6 +79,30 @@ $(document).ready(function () {
         $("pre").show();
     });
 });
+$(document).ready(function () {
+    $("#hide1").click(function () {
+        $("pre").hide();
+    });
+    $("#show1").click(function () {
+        $("pre").show();
+    });
+});
+$(document).ready(function () {
+    $("#hide2").click(function () {
+        $("pre").hide();
+    });
+    $("#show2").click(function () {
+        $("pre").show();
+    });
+});
+$(document).ready(function () {
+    $("#hide3").click(function () {
+        $("pre").hide();
+    });
+    $("#show3").click(function () {
+        $("pre").show();
+    });
+});
     $("#btnEx2").click(function () {
 
         var num = Number($("#factornum").val());

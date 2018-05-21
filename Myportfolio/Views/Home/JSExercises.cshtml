@@ -77,18 +77,16 @@
                             <button id="show">Show Code</button>
                         </div>
                         <pre class="brush: js">
-                            function FizzBuzz(fizz, buzz) {
-    var result = [];
-    for (var i = 1; i <= 100; i++) {
-        var isFizz = ((i % fizz) == 0);
-        var isBuzz = ((i % buzz) == 0);
-
-        if (isFizz && isBuzz) { result.push("<span class='fizzbuzz'>FizzBuzz</span>"); }
-        else if (isFizz) { result.push("<span class='fizz'>Fizz</span>"); }
-        else if (isBuzz) { result.push("<span class='buzz'>Buzz</span>") }
-        else { result.push("<b>" + i + "</b>"); }
-    }
-    return result.join(', ');
+                             if (num1 == " " || num2 == " " || num3 == " " || num4 == " " || num5 == " ") {
+                alert("Please enter a number");
+            }
+            else {
+                var result = "Sum: " + (num1 + num2 + num3 + num4 + num5);
+                result += " and the Largest is:" + Math.max(num1, num2, num3, num4, num5);
+                var result2 = "The Lowest number is " + Math.min(num1, num2, num3, num4, num5);
+                var result3 = "The product of all the numbers is " + (num1 * num2 * num3 * num4 * num5);
+                var result4 = "The mean is " + ((num1 + num2 + num3 + num4 + num5) / 5);
+            }
                         </pre>
                     </div>
                 </div>
@@ -117,12 +115,31 @@
                         <div class="row">
                             <div class="col-md-3">Enter a positive number: </div>
                             <input id="factornum" type="number" />
-                            <div class="col-md-4-offset-2">
+                            <div class="col-md-4">
                                 <p id="joutput2"></p>
                             </div>
                             <div class="col-md-2">
                                 <button id="btnEx2" class="btn btn-info btn-lg">Begin</button>
                             </div>
+                            <div class="col-md-1">
+                                <button id="hide1">Hide Code</button>
+                            </div>
+                            <div class="col-md-1">
+                                <button id="show1">Show Code</button>
+                            </div>
+                            <pre class="brush: js">if (num == " ") {
+        alert("Please enter a number");
+    }
+    else {
+        for (i = 1; i < num; i++) {
+            j = i * j;
+
+        }
+
+        var output = j + " is the factorial of " + num;
+        $("#joutput2").text(output);
+    }
+</pre>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -163,9 +180,28 @@
                         <button id="btnEx3" class="btn btn-info btn-sm">Let's Sizzle</button>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <p id="fboutput"></p>
                         </div>
+                        <div class="col-md-1">
+                            <button id="hide2">Hide Code</button>
+                        </div>
+                        <div class="col-md-1">
+                            <button id="show2">Show Code</button>
+                        </div>
+                        <pre class="brush: js">function FizzBuzz(fizz, buzz) {
+    var result = [];
+    for (var i = 1; i <= 100; i++) {
+        var isFizz = ((i % fizz) == 0);
+        var isBuzz = ((i % buzz) == 0);
+
+        if (isFizz && isBuzz) { result.push("<span class='fizzbuzz'>FizzBuzz</span>"); }
+        else if (isFizz) { result.push("<span class='fizz'>Fizz</span>"); }
+        else if (isBuzz) { result.push("<span class='buzz'>Buzz</span>") }
+        else { result.push("<b>" + i + "</b>"); }
+    }
+    return result.join(', ');
+</pre>
                     </div>
                 </div>
             </div>
@@ -192,12 +228,35 @@
                         <div class="row">
                             <div class="col-md-3">Enter a word or phrase: </div>
                             <input id="sentence" type="string" />
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <p id="joutput4"></p>
                             </div>
                             <div class="col-md-4">
                                 <button id="btnEx4" class="btn btn-info btn-lg">Start</button>
                             </div>
+                            <div class="col-md-1">
+                                <button id="hide3">Hide Code</button>
+                            </div>
+                            <div class="col-md-1">
+                                <button id="show3">Show Code</button>
+                            </div>
+                            <pre class="brush: js">var line = $("#sentence").val();
+        var x = line.length;
+        if (x == 0) {
+            alert("Please enter a word or phrase");
+        }
+        else {
+            var reversel = line.split("").reverse().join("");
+            var tfans;
+            if (line == reversel) {
+                tfans = line + " is a pallandine";
+                $("#joutput4").text(tfans);
+            } else {
+                tfans = line + " is NOT a pallandine";
+                $("#joutput4").text(tfans);
+            }
+        }
+</pre>
                         </div>
                     </div>
                 </div>
@@ -210,9 +269,9 @@
     @section scripts {
 
         <script src="~/Scripts/ExercisesScript.js"></script>
-        <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/styles/shCore.js"></script>
-        <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/styles/shBrushJScript.js"></script>
-        <script type="text/javascript">Script>SyntaxHighlighter.all()</script>
+        <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
+        <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+        <script type="text/javascript">SyntaxHighlighter.all()</script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
