@@ -71,20 +71,14 @@ function FizzBuzz(fizz, buzz) {
         $("#ex3output").text(result3);
         $("#ex4output").text(result4);
 })
-$("#Synbtn").click(function () {
-    <pre class="brush: js" >
-        if (num1 == " " || num2 == " " || num3 == " " || num4 == " " || num5 == " ") {
-            alert("Please enter a number");
-        }
-else {
-    var result = "Sum: " + (num1 + num2 + num3 + num4 + num5);
-        result += " and the Largest is:" + Math.max(num1, num2, num3, num4, num5);
-        var result2 = "The Lowest number is " + Math.min(num1, num2, num3, num4, num5);
-        var result3 = "The product of all the numbers is " + (num1 * num2 * num3 * num4 * num5);
-        var result4 = "The mean is " + ((num1 + num2 + num3 + num4 + num5) / 5);
-    }
-    </pre >
-})
+$(document).ready(function () {
+    $("#hide").click(function () {
+        $("pre").hide();
+    });
+    $("#show").click(function () {
+        $("pre").show();
+    });
+});
     $("#btnEx2").click(function () {
 
         var num = Number($("#factornum").val());

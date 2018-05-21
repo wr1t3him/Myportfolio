@@ -2,7 +2,8 @@
     ViewBag.Title = "Java Exercises";
     <link href="~/Content/Exercise.css" rel="stylesheet" />
     <link href="~/Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
-    <link href="~/Scripts/SyntaxHighlighter/styles/shThemeDefault.css rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/SyntaxHighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
 
 
     <!-- Trigger the modal with a button -->
@@ -69,9 +70,26 @@
                             <p id="ex3output"></p>
                             <p id="ex4output"></p>
                         </div>
-                        <div class="col-md-2">
-                            <button id="Synbtn" class="btn btn-info btn-lg">Show Code</button>
+                        <div class="col-md-1">
+                            <button id="hide">Hide Code</button>
                         </div>
+                        <div class="col-md-1">
+                            <button id="show">Show Code</button>
+                        </div>
+                        <pre class="brush: js">
+                            function FizzBuzz(fizz, buzz) {
+    var result = [];
+    for (var i = 1; i <= 100; i++) {
+        var isFizz = ((i % fizz) == 0);
+        var isBuzz = ((i % buzz) == 0);
+
+        if (isFizz && isBuzz) { result.push("<span class='fizzbuzz'>FizzBuzz</span>"); }
+        else if (isFizz) { result.push("<span class='fizz'>Fizz</span>"); }
+        else if (isBuzz) { result.push("<span class='buzz'>Buzz</span>") }
+        else { result.push("<b>" + i + "</b>"); }
+    }
+    return result.join(', ');
+                        </pre>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -194,9 +212,10 @@
         <script src="~/Scripts/ExercisesScript.js"></script>
         <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/styles/shCore.js"></script>
         <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/styles/shBrushJScript.js"></script>
-        <script type="text/javascript">SyntaxHighlighter.all()</script>
+        <script type="text/javascript">Script>SyntaxHighlighter.all()</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+
+            }
     }
-
-}
 
