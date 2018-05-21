@@ -159,6 +159,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Exercise.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -266,7 +267,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -337,6 +337,8 @@
     <Content Include="templateprofile\vendor\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
     <Content Include="templateprofile\vendor\simple-line-icons\less\simple-line-icons.less" />
     <Content Include="templateprofile\vendor\simple-line-icons\scss\simple-line-icons.scss" />
+    <Content Include="Views\Home\ViewPage1.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,5 +1,9 @@
 ﻿@{
     ViewBag.Title = "Java Exercises";
+    <link href="~/Content/Exercise.css" rel="stylesheet" />
+    <link href="~/Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/SyntaxHighlighter/styles/shThemeDefault.css rel="stylesheet" type="text/css" />
+
 
     <!-- Trigger the modal with a button -->
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise1Modal">Exercise #1</button>
@@ -55,7 +59,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-2">
-                                    <button id="btnEx1" class="btn btn-info btn-lg">Click Me</button>
+                                    <button id="btnEx1" class="btn btn-info btn-lg">Click Here</button>
                                 </div>
                             </div>
                         </div>
@@ -64,6 +68,9 @@
                             <p id="ex2output"></p>
                             <p id="ex3output"></p>
                             <p id="ex4output"></p>
+                        </div>
+                        <div class="col-md-2">
+                            <button id="Synbtn" class="btn btn-info btn-lg">Show Code</button>
                         </div>
                     </div>
                 </div>
@@ -100,6 +107,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,25 +129,33 @@
                     <p>From zero to hundred.</p>
                 </div>
                 <div class="container">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-3">Enter a positive number: </div>
-                            <input id="fbnum1" type="number" />
-                            <div class="col-md-3">Enter a second positive number: </div>
-                            <input id="fbnum2" type="number" />
-                            <div class=" col-md-6">
-                                <p id="fizzout"></p>
-                            </div>
+                    <div class="row">
+                        <div class="col-md-2">Enter #1 (Fizz):</div>
+                        <div class="col-md-2">
+                            <input type="number" id="finput" />
                         </div>
-                        
-                            <div class="col-md-3">
-                                <button id="btnEx3" class="btn btn-info btn-lg">Let's Sizzle</button>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">Enter #2 (Buzz):</div>
+                        <div class="col-md-2">
+                            <input type="number" id="binput" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button id="btnEx3" class="btn btn-info btn-sm">Let's Sizzle</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p id="fboutput"></p>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
         </div>
+    </div>
 
     <!--Modal-->
     <div id="Exercise4modal" class="modal fade" role="dialog">
@@ -165,13 +183,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
     @section scripts {
-      
-    <script src="~/Scripts/ExercisesScript.js"></script>
-        }
-       
-        }
-   
+
+        <script src="~/Scripts/ExercisesScript.js"></script>
+        <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/styles/shCore.js"></script>
+        <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/styles/shBrushJScript.js"></script>
+        <script type="text/javascript">SyntaxHighlighter.all()</script>
+
+    }
+
+}
+
